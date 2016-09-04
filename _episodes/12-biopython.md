@@ -1,14 +1,18 @@
 ---
 title: "Biopython"
-teaching: 15
-exercises: 15
+teaching: 10
+exercises: 10
 questions:
 - "How do I handle sequence files?"
 objectives:
 - "Use Biopython to parse and write sequence files"
 - "Get to know other useful Biopython components"
 keypoints:
-- "FIXME"
+- "Install and load Biopython"
+- "Use Biopython to load sequence files"
+- "Work with sequence records"
+- "Convert formats"
+- ""
 ---
 ## What is Biopython
 
@@ -41,7 +45,7 @@ print(Bio.__version__)
 
 ~~~
 from Bio import SeqIO
-records = SeqIO.parse('NC_03888.gbk', 'genbank')
+records = SeqIO.parse('data/Streptomyces_coelicolor.gbk', 'genbank')
 ~~~
 {: python}
 
@@ -51,11 +55,11 @@ You always need to tell `SeqIO.parse` what kind of filetype it is supposed to re
 It will not guess the type from the file extension.
 
 ~~~
-records = SeqIO.parse('NC_03888.gbk')
+records = SeqIO.parse('data/Streptomyces_coelicolor.gbk')
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-6-d92ec57b2f34> in <module>()
-----> 1 records = SeqIO.parse('NC_03888.gbk')
+----> 1 records = SeqIO.parse('data/Streptomyces_coelicolor.gbk')
 
 TypeError: parse() missing 1 required positional argument: 'format'
 ~~~
@@ -64,8 +68,26 @@ TypeError: parse() missing 1 required positional argument: 'format'
 
 ## Exploring the record
 
+Printing a record will give you some summary information on it.
+
 ~~~
 for record in records:
     print(record)
 ~~~
 {: python}
+
+
+## `SeqIO.parse()` returns a generator function, not a list
+
+If you run the previous loop again, you will not get any output.
+This is because the return value of `SeqIO.parse()` is a so-called generator function.
+In many ways a generator function works like a list, but it genrates the results on the fly.
+This is beneficial for large input files where you don't want to keep the whole file in memory.
+
+You have used generator functions before: `range()` is a generator function as well.
+
+> ## Tip: If you need to iterate over your records multiple times, convert the generator to a list
+> ```python
+records = list(SeqIO.parse('data/Streptomyces_coelicolor.gbk', 'genbank'))
+```
+{: .callout}
