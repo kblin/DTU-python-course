@@ -18,7 +18,17 @@ like BLAST, ClustalW, FASTA, GenBank, PubMed ExPASy, SwissProt, and many more. B
 modules to connect to popular on-line services like NCBI's Blast, Entrez and PubMed or ExPASy's Swiss-Prot,
 UniProt and Prosite.
 
+## Installing Biopython in Jupyter
+
+1. Click on the `Conda` tab
+2. Type "biopython" into the search box
+3. Select the checkbox for biopython
+4. Hit the arrow button to install
+5. Wait
+
 ## Loading the Biopython library
+
+Open a new notebook for this.
 
 ~~~
 import Bio
@@ -35,7 +45,7 @@ records = SeqIO.parse('NC_03888.gbk', 'genbank')
 ~~~
 {: python}
 
-### The filetype is important
+## The filetype is important
 
 You always need to tell `SeqIO.parse` what kind of filetype it is supposed to read.
 It will not guess the type from the file extension.
@@ -45,8 +55,17 @@ records = SeqIO.parse('NC_03888.gbk')
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-6-d92ec57b2f34> in <module>()
-----> 1 recs = SeqIO.parse('NC_03888.gbk')
+----> 1 records = SeqIO.parse('NC_03888.gbk')
 
 TypeError: parse() missing 1 required positional argument: 'format'
+~~~
+{: python}
+
+
+## Exploring the record
+
+~~~
+for record in records:
+    print(record)
 ~~~
 {: python}
