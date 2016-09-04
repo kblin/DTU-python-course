@@ -71,11 +71,12 @@ If you run into any difficulties, please request help before the workshop begins
 
 ## Getting the Data
 
-The data we will be using is taken from the [gapminder](http://gapminder.org) dataset.
+This lesson comes with a number of pre-made notebooks and some practice data.
+The data we will be using for the pandas lesson is taken from the [gapminder](http://gapminder.org) dataset.
 To obtain it, download and unzip the file 
-[python-novice-gapminder-data.zip][data-zip].
+[python-novice-biopython-data.zip][data-zip].
 In order to follow the presented material, you should launch a Jupyter 
-notebook in the "data" directory (see [Starting Python](#Starting-Python)).
+notebook in the "notebooks" directory (see [Starting Python](#Starting-Python)).
 
 ## Starting Python
 
@@ -103,4 +104,4 @@ $ python
 ~~~
 {: .source}
 
-[data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-gapminder-data.zip?raw=true
+[data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-biopython-data.zip?raw=true
