@@ -78,6 +78,9 @@ To obtain it, download and unzip the file
 In order to follow the presented material, you should launch a Jupyter 
 notebook in the "notebooks" directory (see [Starting Python](#Starting-Python)).
 
+Solutions for the exercises are in
+[notebooks_solved.zip][data-solved-zip].
+
 ## Starting Python
 
 We will teach Python using the [Jupyter notebook](http://jupyter.org/), a 
@@ -105,3 +108,4 @@ $ python
 {: .source}
 
 [data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-biopython-data.zip?raw=true
+[data-solved-zip]: {{site.github.repository_url}}/blob/gh-pages/files/notebooks_solved.zip?raw=true
