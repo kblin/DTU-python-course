@@ -1,5 +1,5 @@
 ---
-title: "Defensive Programming"
+title: "Defensive Programming (Niko)"
 teaching: 5
 exercises: 10
 questions:

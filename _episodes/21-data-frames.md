@@ -1,5 +1,5 @@
 ---
-title: "Pandas Data Frames"
+title: "Pandas Data Frames (Niko)"
 teaching: 10
 exercises: 10
 questions:

@@ -1,5 +1,5 @@
 ---
-title: "Wrap-Up"
+title: "Wrap-Up (Niko / Kai)"
 teaching: 15
 exercises: 0
 questions:

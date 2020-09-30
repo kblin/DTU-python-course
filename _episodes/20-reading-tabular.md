@@ -1,5 +1,5 @@
 ---
-title: "Reading Tabular Data into Data Frames"
+title: "Reading Tabular Data into Data Frames (Niko)"
 teaching: 5
 exercises: 10
 questions:

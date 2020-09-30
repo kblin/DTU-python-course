@@ -1,5 +1,5 @@
 ---
-title: "Writing Functions"
+title: "Writing Functions (Niko)"
 teaching: 10
 exercises: 15
 questions:

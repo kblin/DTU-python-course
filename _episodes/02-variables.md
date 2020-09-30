@@ -1,5 +1,5 @@
 ---
-title: "Variables and Assignment"
+title: "Variables and Assignment (Kai)"
 teaching: 5
 exercises: 5
 questions:

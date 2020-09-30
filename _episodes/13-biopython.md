@@ -1,5 +1,5 @@
 ---
-title: "Biopython"
+title: "Biopython (Kai)"
 teaching: 10
 exercises: 10
 questions:

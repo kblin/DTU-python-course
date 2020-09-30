@@ -1,5 +1,5 @@
 ---
-title: Debugging
+title: "Debugging (Niko)"
 teaching: 10
 exercises: 15
 questions:

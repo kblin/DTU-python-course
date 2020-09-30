@@ -1,5 +1,5 @@
 ---
-title: "Data Types and Type Conversion"
+title: "Data Types and Type Conversion (Kai)"
 teaching: 5
 exercises: 5
 questions:

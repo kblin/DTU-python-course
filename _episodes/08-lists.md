@@ -1,5 +1,5 @@
 ---
-title: "Lists and Indexing"
+title: "Lists and Indexing (Kai)"
 teaching: 10
 exercises: 10
 questions:
