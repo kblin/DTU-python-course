@@ -10,25 +10,38 @@ objectives:
 - "Select a subset of both rows and columns from a data frame in a single operation."
 - "Select a subset of a data frame by a single Boolean criterion."
 keypoints:
-- "Use `DataFrame.ix[..., ...]` to select values by location."
+- "Use `DataFrame.iloc[..., ...]` to select values by location."
 - "Use `:` on its own to mean all columns or all rows."
-- "Select multiple columns or rows using `DataFrame.ix` and a named slice."
+- "Select multiple columns or rows using by location using `DataFrame.iloc`"
+- "Select multiple columns or rows using by labels using `DataFrame.loc`"
 - "Result of slicing can be used in further operations."
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
 ---
-## Use `DataFrame.ix[..., ...]` to select values by location.
+## Use `DataFrame.iloc[..., ...]` to select values by location.
 
-*   Can specify location by name or by numerical index.
+*   Can specify location by numerical index.
 
 ~~~
 data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.ix["Albania", "gdpPercap_1952"])
-print(data.ix[0, 0])
+print(data.iloc[0, 0])
 ~~~
 {: .python}
 ~~~
 1601.056136
+~~~
+{: .output}
+
+## Use `DataFrame.loc[..., ...]` to select values by labels.
+
+*   Can specify location by name/label.
+
+~~~
+data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+print(data.["Albania", "gdpPercap_1952"])
+~~~
+{: .python}
+~~~
 1601.056136
 ~~~
 {: .output}
@@ -38,7 +51,7 @@ print(data.ix[0, 0])
 *   Just like Python's usual slicing notation.
 
 ~~~
-print(data.ix["Albania", :])
+print(data.loc["Albania", :])
 ~~~
 {: .python}
 ~~~
@@ -58,10 +71,10 @@ Name: Albania, dtype: float64
 ~~~
 {: .output}
 
-*   Would get the same result printing `data.ix["Albania"]` (without a second index).
+*   Would get the same result printing `data.loc["Albania"]` (without a second index).
 
 ~~~
-print(data.ix[:, "gdpPercap_1952"])
+print(data.loc[:, "gdpPercap_1952"])
 ~~~
 {: .python}
 ~~~
@@ -80,10 +93,10 @@ Name: gdpPercap_1952, dtype: float64
 *   Would get the same result printing `data["gdpPercap_1952"]`
 *   Also get the same result printing `data.gdpPercap_1952` (since it's a column name)
 
-## Select multiple columns or rows using `DataFrame.ix` and a named slice.
+## Select multiple columns or rows using `DataFrame.loc` and a named slice.
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
 ~~~
 {: .python}
 ~~~
@@ -110,7 +123,7 @@ pythonic behavior.
     work the same way on slices.
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
 ~~~
 {: .python}
 ~~~
@@ -122,7 +135,7 @@ dtype: float64
 {: .output}
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
 ~~~
 {: .python}
 ~~~
@@ -140,7 +153,7 @@ dtype: float64
 
 ~~~
 # Use a subset of data to keep output readable.
-subset = data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
+subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print('Subset of data:\n', subset)
 
 # Which values were greater than 10000 ?
@@ -230,8 +243,8 @@ max      13450.401510    16361.876470    18965.055510
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 >
 > ~~~
-> print(data.ix[0:2, 0:2])
-> print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+> print(data.iloc[0:2, 0:2])
+> print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .python}
 {: .challenge}
