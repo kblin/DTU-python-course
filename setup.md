@@ -19,21 +19,21 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial](https://www.youtube.com/watch?v=xxQ0mzZ8UvA)
 
-1. Open [http://continuum.io/downloads](http://continuum.io/downloads#_windows) 
+1. Open [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual) 
     with your web browser.
 
-2. Download the Python 3 installer for Windows.
+2. Download the graphical installer for Windows.
 
-3. Double-click the executable and install Python 3 using _MOST_ of the
+3. Double-click the executable and install Python using _MOST_ of the
     default settings. The only exception is to check the 
-    **Make Anaconda the default Python** option.
+    **Make Anaconda the default Python** option (in case that opion exists).
 
 ### Mac OS X - [Video tutorial](https://www.youtube.com/watch?v=TcSAln46u9U)
 
-1. Open [http://continuum.io/downloads](http://continuum.io/downloads#_macosx) 
+1. Open [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual) 
     with your web browser.
 
-2. Download the Python 3 installer for OS X.
+2. Download the graphicsl installer for OS X at the botoom.
 
 3. Install Python 3 using all of the defaults for installation.
 
@@ -41,9 +41,10 @@ you are ready to go as soon as the workshop begins.
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [http://continuum.io/downloads](http://continuum.io/downloads#_unix) with your web browser.
+1.  Open [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)
+     with your web browser.
 
-2.  Download the Python 3 installer for Linux.
+2.  Download a suitable installer for Linux.
 
 3.  Install Python 3 using all of the defaults for installation.
 
